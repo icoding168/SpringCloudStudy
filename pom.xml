@@ -26,6 +26,9 @@
         <module>configuration</module>
         <module>blog</module>
         <module>account</module>
+        <module>eureka-server</module>
+        <module>eureka-client-1</module>
+        <module>euruka-client-2</module>
     </modules>
 
     <dependencyManagement>
@@ -40,6 +43,15 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 

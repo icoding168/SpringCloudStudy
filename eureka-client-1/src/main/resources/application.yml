@@ -1,0 +1,6 @@
+server:
+  port: 8023
+
+spring:
+  application:
+    name: EurekaClient1
