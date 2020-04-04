@@ -25,6 +25,7 @@
         <module>common</module>
         <module>configuration</module>
         <module>blog</module>
+        <module>account</module>
     </modules>
 
     <dependencyManagement>

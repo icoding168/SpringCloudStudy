@@ -1,4 +1,4 @@
-package xyz.icoding168.scs.blog;
+package xyz.icoding168.scs.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class BlogApplication {
+public class AccountApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(BlogApplication.class, args);
+        SpringApplication.run(AccountApplication.class, args);
     }
 }
