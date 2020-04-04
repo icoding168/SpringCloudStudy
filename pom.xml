@@ -28,7 +28,7 @@
         <module>account</module>
         <module>eureka-server</module>
         <module>eureka-client-1</module>
-        <module>euruka-client-2</module>
+        <module>eureka-client-2</module>
     </modules>
 
     <dependencyManagement>
