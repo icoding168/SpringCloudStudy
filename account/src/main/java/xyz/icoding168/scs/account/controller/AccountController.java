@@ -1,6 +1,7 @@
 package xyz.icoding168.scs.account.controller;
 
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,5 +35,19 @@ public class AccountController {
 
         return accountFeignClient.testFeign("John");
 
+    }
+
+    @RequestMapping("testHystrix")
+    @HystrixCommand(fallbackMethod = "getNameFallback")
+    public Object testHystrix(String username) throws Exception{
+        if(username.equals("john")){
+            return "this is John";
+        }else{
+            throw new Exception();
+        }
+    }
+
+    public String getNameFallback(String username){
+        return " this username is not exist ";
     }
 }
