@@ -27,5 +27,16 @@ public class ProviderController {
 
     }
 
+    @RequestMapping("testFeign")
+    public Object testFeign(String username){
+        Map map = new HashMap<>();
+
+        map.put("provider","EurekaClient1:" + serverPort);
+        map.put("username",username);
+
+        return map;
+
+    }
+
 
 }

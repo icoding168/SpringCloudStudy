@@ -46,5 +46,20 @@ public class ConsumerController {
 
     }
 
+    @Autowired
+    private FeignInterface feignInterface;
+
+    @RequestMapping("testFeign")
+    public Object testFeign(){
+        try{
+            return feignInterface.testFeign("John");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return new HashMap<>();
+
+    }
+
 
 }
