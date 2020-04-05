@@ -31,7 +31,7 @@ public class ConsumerController {
     @RequestMapping("test")
     public Object test(){
         try{
-            RequestEntity requestEntity = new RequestEntity(HttpMethod.GET,new URI("http://EurekaClient1/provider/test"));
+            RequestEntity requestEntity = new RequestEntity(HttpMethod.GET,new URI("http://backend/provider/test"));
 
             HashMap body = restTemplate.exchange(requestEntity, HashMap.class).getBody();
 

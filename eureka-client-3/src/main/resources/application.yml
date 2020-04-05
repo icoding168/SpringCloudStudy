@@ -3,4 +3,4 @@ server:
 
 spring:
   application:
-    name: EurekaClient3
+    name: backend
