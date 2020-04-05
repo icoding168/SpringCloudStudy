@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import xyz.icoding168.scs.account.openfeign.AccountFeignClient;
 import xyz.icoding168.scs.account.service.AccountService;
 
 @RequestMapping("account")
@@ -18,10 +19,20 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+    @Autowired
+    private AccountFeignClient accountFeignClient;
+
     @RequestMapping("test")
     public Object test(){
 
         return accountService.test();
+
+    }
+
+    @RequestMapping("testFeign")
+    public Object testFeign(){
+
+        return accountFeignClient.testFeign("John");
 
     }
 }

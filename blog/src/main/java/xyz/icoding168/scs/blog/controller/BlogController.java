@@ -28,4 +28,15 @@ public class BlogController {
         return map;
 
     }
+
+    @RequestMapping("testFeign")
+    public Object testFeign(String username){
+        Map map = new HashMap<>();
+
+        map.put("username",username);
+
+        return map;
+
+    }
+
 }
